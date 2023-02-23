@@ -1,0 +1,406 @@
+/*---------- IMPORT ----------*/ /*---------- IMPORT ----------*/ /*#141e30*/
+/*#96163f*/
+/*#ffffff*/
+/*#000000*/
+/*#00000060*/
+/*---------- DEFINE FONT AND TYPOGRAPHY ----------*/
+/*---------- DEFINE LAYOUT ----------*/
+/*---------- DEFINE FOR ANIMATION ----------*/
+/*#141e30*/
+/*#96163f*/
+/*#ffffff*/
+/*#000000*/
+/*#00000060*/
+/*---------- DEFINE FONT AND TYPOGRAPHY ----------*/
+/*---------- DEFINE LAYOUT ----------*/
+/*---------- DEFINE FOR ANIMATION ----------*/
+main .benefits-grid .benefit h3, main .google-rating .ratings-grid .slide .component, main .google-rating .ratings-grid .slide, header .hero .right, header .hero .left, .copyright, footer .content .menu .left-menu,
+footer .content .menu .center-menu,
+footer .content .menu .right-menu, main hr, main a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .content .menu, header nav .menu, header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .benefits-grid .benefit h3::before, main .benefits-grid .benefit h3, main .benefits-grid .benefit::before, main .benefits-grid .benefit, main hr::before, main hr, main a::before, main a {
+  transition: 0.5s;
+  background: linear-gradient(to right, #76b729 0%, #36831d 50%, #76b729 100%);
+  background-size: 200% auto;
+}
+
+/*---------- BASE ----------*/
+* {
+  font-size: 1rem;
+  color: #000000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*---------- REUSEABLE ----------*/
+main {
+  width: 80vw;
+  margin: 5rem auto;
+}
+main a {
+  position: relative;
+  color: #ffffff;
+}
+main a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+main a:hover,
+main a:hover::before {
+  background-position: right center;
+}
+main a {
+  padding: 1rem 3rem;
+}
+main hr {
+  position: relative;
+  color: #ffffff;
+}
+main hr::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+main hr:hover,
+main hr:hover::before {
+  background-position: right center;
+}
+main hr {
+  margin: 7rem auto;
+  height: 0.5vh;
+  border-radius: 2rem;
+  border: 0;
+}
+
+.deko {
+  position: absolute;
+}
+
+h1, h2, h3, h4 {
+  color: #76b729;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+/*---------- HEADER ----------*/
+header {
+  /*---------- NAV ----------*/
+}
+header nav {
+  padding-top: 1rem;
+  width: 80vw;
+  margin: auto;
+}
+header nav .logo a img {
+  height: 10vh;
+}
+header nav .menu {
+  width: 70%;
+}
+header nav .menu a:hover,
+header nav .menu .highlight {
+  background: #ffffff;
+  color: #76b729;
+  transition: 0.5s;
+}
+
+/*---------- FOOTER ----------*/
+footer {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
+  width: 100%;
+}
+footer .content {
+  width: 80vw;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+}
+footer .content .logo {
+  margin-bottom: 7rem;
+}
+footer .content .logo img {
+  width: 20vw;
+}
+footer .content .menu .left-menu,
+footer .content .menu .center-menu,
+footer .content .menu .right-menu {
+  flex-direction: column;
+}
+footer .content .menu .left-menu a,
+footer .content .menu .center-menu a,
+footer .content .menu .right-menu a {
+  color: #ffffff;
+  border-radius: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0.5rem;
+  width: 15rem;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.5s;
+}
+footer .content .menu .left-menu a:hover,
+footer .content .menu .center-menu a:hover,
+footer .content .menu .right-menu a:hover {
+  background: #36831d;
+  border-bottom: 1px solid #ffffff;
+}
+
+.copyright {
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+  padding: 0.5rem;
+}
+
+/*---------- IMPORT ----------*/
+header {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
+}
+header a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.33rem;
+}
+header .highlight {
+  background: #ffffff;
+  color: #76b729;
+  transition: 0.5s;
+}
+header .highlight:hover {
+  transform: scale(1.1);
+}
+header .deko-top-left {
+  top: 12rem;
+  left: 3rem;
+  opacity: 0.8;
+}
+header .deko-top-center {
+  top: 23rem;
+  left: 45%;
+  transform: rotate(30deg);
+  opacity: 0.6;
+}
+header .deko-top-right {
+  top: 10rem;
+  right: 10rem;
+}
+header .hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 70vh;
+  width: 80vw;
+  margin: auto;
+}
+header .hero .left {
+  height: 70%;
+  width: 90%;
+}
+header .hero .left h1 {
+  color: #000000;
+  text-align: left;
+}
+header .hero .left h1 span {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+header .hero .left h3 {
+  color: #000000;
+  font-weight: 400;
+  transform: translateY(-10px);
+}
+header .hero .right {
+  height: 70%;
+  z-index: 1;
+}
+header .hero .right img {
+  height: 100%;
+  transform: translateY(10rem);
+}
+header .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/*---------- MAIN ----------*/
+main {
+  /*---------- GOOGLE-RATING ----------*/
+}
+main .google-rating .ratings-grid {
+  position: relative;
+  margin: auto;
+}
+main .google-rating .ratings-grid .arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 25%;
+  width: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main .google-rating .ratings-grid .arrow i {
+  color: #ffffff;
+  font-size: 2rem;
+}
+main .google-rating .ratings-grid .arrow-left {
+  left: 0;
+}
+main .google-rating .ratings-grid .arrow-right {
+  right: 0;
+}
+main .google-rating .ratings-grid .dots {
+  text-align: center;
+}
+main .google-rating .ratings-grid .dots .dot {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  margin: 2rem 2px 0;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+main .google-rating .ratings-grid .dots .active, main .google-rating .ratings-grid .dots .dot:hover {
+  background-color: #76b729;
+}
+main .google-rating .ratings-grid .slide {
+  margin: 0 9rem;
+  display: none;
+}
+main .google-rating .ratings-grid .slide .component {
+  margin: 1rem;
+  width: 100%;
+  height: 13rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6235294118);
+  border-radius: 2rem;
+  transition: 0.5s;
+}
+main .google-rating .ratings-grid .slide .component img {
+  border-radius: 2rem;
+  width: -moz-max-content;
+  width: max-content;
+  width: 100%;
+}
+main .google-rating .ratings-grid .slide .component:hover {
+  transform: scale(1.15);
+}
+main .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  gap: 5rem;
+}
+main .benefits-grid .benefit {
+  position: relative;
+  color: #ffffff;
+}
+main .benefits-grid .benefit::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+main .benefits-grid .benefit:hover,
+main .benefits-grid .benefit:hover::before {
+  background-position: right center;
+}
+main .benefits-grid .benefit {
+  background: #ffffff;
+  border-radius: 2rem;
+}
+main .benefits-grid .benefit h3 {
+  position: relative;
+  color: #ffffff;
+}
+main .benefits-grid .benefit h3::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+main .benefits-grid .benefit h3:hover,
+main .benefits-grid .benefit h3:hover::before {
+  background-position: right center;
+}
+main .benefits-grid .benefit h3 {
+  padding: 0;
+  margin: 0;
+  border-radius: 2rem 0.3rem;
+  color: #000000;
+}
+main .benefits-grid .benefit h3,
+main .benefits-grid .benefit p {
+  height: 10rem;
+  text-align: center;
+}
+main .benefits-grid .benefit p {
+  padding: 2rem;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,202 @@
+/*---------- IMPORT ----------*/ /*#141e30*/
+/*#96163f*/
+/*#ffffff*/
+/*#000000*/
+/*#00000060*/
+/*---------- DEFINE FONT AND TYPOGRAPHY ----------*/
+/*---------- DEFINE LAYOUT ----------*/
+/*---------- DEFINE FOR ANIMATION ----------*/
+/*#141e30*/
+/*#96163f*/
+/*#ffffff*/
+/*#000000*/
+/*#00000060*/
+/*---------- DEFINE FONT AND TYPOGRAPHY ----------*/
+/*---------- DEFINE LAYOUT ----------*/
+/*---------- DEFINE FOR ANIMATION ----------*/
+.copyright, footer .content .menu .left-menu,
+footer .content .menu .center-menu,
+footer .content .menu .right-menu, main hr, main a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .content .menu, header nav .menu, header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main hr::before, main hr, main a::before, main a {
+  transition: 0.5s;
+  background: linear-gradient(to right, #76b729 0%, #36831d 50%, #76b729 100%);
+  background-size: 200% auto;
+}
+
+/*---------- BASE ----------*/
+* {
+  font-size: 1rem;
+  color: #000000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/*---------- REUSEABLE ----------*/
+main {
+  width: 80vw;
+  margin: 5rem auto;
+}
+main a {
+  position: relative;
+  color: #ffffff;
+}
+main a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+main a:hover,
+main a:hover::before {
+  background-position: right center;
+}
+main a {
+  padding: 1rem 3rem;
+}
+main hr {
+  position: relative;
+  color: #ffffff;
+}
+main hr::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+main hr:hover,
+main hr:hover::before {
+  background-position: right center;
+}
+main hr {
+  margin: 7rem auto;
+  height: 0.5vh;
+  border-radius: 2rem;
+  border: 0;
+}
+
+.deko {
+  position: absolute;
+}
+
+h1, h2, h3, h4 {
+  color: #76b729;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+/*---------- HEADER ----------*/
+header {
+  /*---------- NAV ----------*/
+}
+header nav {
+  padding-top: 1rem;
+  width: 80vw;
+  margin: auto;
+}
+header nav .logo a img {
+  height: 10vh;
+}
+header nav .menu {
+  width: 70%;
+}
+header nav .menu a:hover,
+header nav .menu .highlight {
+  background: #ffffff;
+  color: #76b729;
+  transition: 0.5s;
+}
+
+/*---------- FOOTER ----------*/
+footer {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
+  width: 100%;
+}
+footer .content {
+  width: 80vw;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+}
+footer .content .logo {
+  margin-bottom: 7rem;
+}
+footer .content .logo img {
+  width: 20vw;
+}
+footer .content .menu .left-menu,
+footer .content .menu .center-menu,
+footer .content .menu .right-menu {
+  flex-direction: column;
+}
+footer .content .menu .left-menu a,
+footer .content .menu .center-menu a,
+footer .content .menu .right-menu a {
+  color: #ffffff;
+  border-radius: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0.5rem;
+  width: 15rem;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.5s;
+}
+footer .content .menu .left-menu a:hover,
+footer .content .menu .center-menu a:hover,
+footer .content .menu .right-menu a:hover {
+  background: #36831d;
+  border-bottom: 1px solid #ffffff;
+}
+
+.copyright {
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+  padding: 0.5rem;
+}/*# sourceMappingURL=master.css.map */

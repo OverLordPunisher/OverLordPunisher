@@ -1,0 +1,154 @@
+/*---------- IMPORT ----------*/
+@import 'variables';
+@import 'snippets';
+
+/*---------- BASE ----------*/
+* {
+    font-size: $normal-font-size;
+    color: $color-font;
+}
+
+body {
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*---------- REUSEABLE ----------*/
+main {
+    width: $desktop-screen;
+    margin: 5rem auto;
+
+    @include gradient-effect(a);
+    a {
+        @extend %flex-center;
+        padding: 1rem 3rem;
+    }
+
+    @include gradient-effect(hr);
+    hr {
+        @extend %flex-center;
+        margin: 7rem auto;
+        height: 0.5vh;
+        border-radius: $round;
+        border: 0;
+    }
+}
+
+.deko {
+    position: absolute;
+}
+
+
+h1, h2, h3, h4 {
+    color: $color-primary;
+    font-weight: $font-semi-bold;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: $h2-font-size;
+}
+
+h3 {
+    font-size: $h3-font-size;
+}
+
+a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: $round;
+}
+
+/*---------- HEADER ----------*/
+header {
+    
+    /*---------- NAV ----------*/
+    nav {
+        @extend %flex-between;
+        padding-top: 1rem;
+        width: $desktop-screen;
+        margin: auto;
+
+        .logo {
+            a img {
+                height: 10vh;
+            }
+        }
+
+        .menu {
+            @extend %flex-between;
+            width: 70%;
+
+            a:hover,
+            .highlight {
+                background: $color-background;
+                color: $color-primary;
+                transition: $transition;
+            }
+        }
+    }
+}
+
+/*---------- FOOTER ----------*/
+footer {
+    position: relative;
+    height: 70vh;
+    background: $gradient-primary;
+    width: 100%;
+
+    .content {
+        width: $desktop-screen;
+        position: absolute;
+        top: 10rem;
+        left: 10rem;
+
+        .logo {
+            img {
+                width: 20vw;
+            }
+            margin-bottom: 7rem;
+        }
+
+        .menu {
+            @extend %flex-between;
+
+            .left-menu,
+            .center-menu,
+            .right-menu {
+                @extend %flex-center;
+                flex-direction: column;
+
+                a {
+                    color: $color-background;
+                    border-radius: 0;
+                    border-bottom: $border transparent;
+                    padding: .5rem;
+                    width: 15rem;
+                    text-align: center;
+                    font-weight: $font-medium;
+                    transition: $transition;
+                }
+
+                a:hover {
+                    background: $color-secondary;
+                    border-bottom: $border $color-background;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    @extend %flex-center;
+    background: $gradient-primary;
+    color: $color-background;
+    border-top: $border $color-background;
+    padding: 0.5rem;
+}
