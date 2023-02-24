@@ -97,6 +97,23 @@ header {
 }
 
 /*---------- FOOTER ----------*/
+.deko-footer-center {
+    left: 40rem;
+    top: 200rem;
+    transform: scale(0.7) rotate(30deg);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+
+.deko-footer-right {
+    right: 5rem;
+    top: 218rem;
+    z-index: 1;
+    opacity: 0.2;
+    transform: rotate(60deg) scale(1.5);
+}
+
 footer {
     position: relative;
     height: 70vh;
@@ -104,6 +121,7 @@ footer {
     width: 100%;
 
     .content {
+        z-index: 2;
         width: $desktop-screen;
         position: absolute;
         top: 10rem;
