@@ -165,7 +165,7 @@ header nav .menu .highlight {
   top: 218rem;
   z-index: 1;
   opacity: 0.2;
-  transform: rotate(60deg) scale(1.5);
+  transform: rotate(60deg) scale(0.8);
 }
 
 footer {
