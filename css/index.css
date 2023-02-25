@@ -7,7 +7,7 @@
 /*---------- DEFINE LAYOUT ----------*/
 /*---------- DEFINE ANIMATION ----------*/
 /*---------- FLEX ----------*/
-header .text-left, .copyright, footer .footer .footer-menu, footer .footer .contact, footer .footer .footer-img {
+header .text-left, .copyright, footer .footer .footer-menu, footer .footer .footer-img {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@ footer .footer .footer-menu a, nav .nav .nav-menu, nav .nav {
   justify-content: space-between;
 }
 
-footer .footer .contact p {
+footer .footer .contact p, footer .footer .contact {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -176,7 +176,7 @@ footer .footer .footer-img img {
   width: 75%;
 }
 footer .footer .contact {
-  text-align: center;
+  text-align: left;
 }
 footer .footer .contact h3 {
   color: #ffffff;
@@ -190,9 +190,13 @@ footer .footer .contact p {
   color: #ffffff;
 }
 footer .footer .contact p a {
+  padding: 0;
   color: #ffffff;
   border-radius: 0;
   border-bottom: 1px solid transparent;
+}
+footer .footer .contact p a i {
+  height: 1rem;
 }
 footer .footer .contact p a:hover {
   border-bottom: 1px solid #ffffff;

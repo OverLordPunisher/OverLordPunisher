@@ -114,8 +114,8 @@ footer {
         }
 
         .contact {
-            @extend %flex-center;
-            text-align: center;
+            @extend %flex-left;
+            text-align: left;
 
             h3 {
                 color: $color-background;
@@ -130,9 +130,14 @@ footer {
                 color: $color-background;
 
                 a {
+                    padding: 0;
                     color: $color-background;
                     border-radius: 0;
                     border-bottom: $border transparent;
+
+                    i {
+                        height: 1rem;
+                    }
                 }
 
                 a:hover {
