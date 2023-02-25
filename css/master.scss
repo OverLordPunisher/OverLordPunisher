@@ -4,52 +4,22 @@
 
 /*---------- BASE ----------*/
 * {
-    font-size: $normal-font-size;
-    color: $color-font;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-size: $normal-font-size;
     font-family: $font;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    color: $color-font;
 }
 
-/*---------- REUSEABLE ----------*/
-main {
-    width: $desktop-screen;
-    margin: 5rem auto;
-
-    @include gradient-effect(a);
-    a {
-        @extend %flex-center;
-        padding: 1rem 3rem;
-    }
-
-    @include gradient-effect(hr);
-    hr {
-        @extend %flex-center;
-        margin: 7rem auto;
-        height: 0.5vh;
-        border-radius: $round;
-        border: 0;
-    }
-}
-
-.deko {
-    position: absolute;
-}
-
-
-h1, h2, h3, h4 {
-    color: $color-primary;
-    font-weight: $font-semi-bold;
+html {
+    scroll-behavior: smooth;
 }
 
 h1 {
     font-size: $h1-font-size;
-    margin-bottom: 3rem;
-    text-align: center;
 }
 
 h2 {
@@ -64,100 +34,128 @@ a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: $round;
+    color: $color-font;
 }
 
-/*---------- HEADER ----------*/
-header {
-    
-    /*---------- NAV ----------*/
-    nav {
-        @extend %flex-between;
-        padding-top: 1rem;
-        width: $desktop-screen;
-        margin: auto;
+.container {
+    width: $desktop-screen;
+    margin: auto
+}
 
-        .logo {
-            a img {
-                height: 10vh;
+main {
+    margin-top: 10vh;
+}
+
+/*---------- NAV ----------*/
+@include gradient-effect(nav);
+nav {
+    background: $color-background;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .nav {
+        padding: 0 9vw;
+        @extend %flex-between;
+        flex-direction: row;
+        height: 10vh;
+        background: $color-background;
+
+        .nav-logo {
+            height: 100%;
+
+            img {
+                height: 100%;
             }
         }
 
-        .menu {
+        .nav-menu {
             @extend %flex-between;
-            width: 70%;
+            flex-direction: row;
+            width: 60%;
 
             a:hover,
+            .active,
             .highlight {
-                background: $color-background;
-                color: $color-primary;
+                background: $gradient-primary-to-secondary;
+                color: $color-background;
+            }
+
+            .highlight {
                 transition: $transition;
             }
+        
+            .highlight:hover {
+                transform: scale(1.1)
+            }
+        
         }
+    }
+
+    .nav.nav-fixed {
+        height: 7vh;
     }
 }
 
-/*---------- FOOTER ----------*/
-.deko-footer-center {
-    left: 40rem;
-    top: 200rem;
-    transform: scale(0.7) rotate(30deg);
-    opacity: 0.5;
-    z-index: 1;
-}
-
-
-.deko-footer-right {
-    right: 5rem;
-    top: 218rem;
-    z-index: 1;
-    opacity: 0.2;
-    transform: rotate(60deg) scale(0.8);
-}
-
+@include gradient-effect(footer);
 footer {
-    position: relative;
-    height: 70vh;
-    background: $gradient-primary;
-    width: 100%;
+    background: $gradient-primary-to-secondary;
+    .footer {
+        @include grid(3);
+        padding: 1rem;
 
-    .content {
-        z-index: 2;
-        width: $desktop-screen;
-        position: absolute;
-        top: 10rem;
-        left: 10rem;
+        
+        .footer-img {
+            @extend %flex-center;
 
-        .logo {
             img {
-                width: 20vw;
+                width: 75%;
             }
-            margin-bottom: 7rem;
         }
 
-        .menu {
-            @extend %flex-between;
+        .contact {
+            @extend %flex-center;
+            text-align: center;
 
-            .left-menu,
-            .center-menu,
-            .right-menu {
-                @extend %flex-center;
-                flex-direction: column;
+            h3 {
+                color: $color-background;
+                font-weight: $font-weight-medium;
+                text-align: left;
+            }
+
+            p {
+                margin: 1rem 0;
+                width: fit-content;
+                @extend %flex-left;
+                color: $color-background;
 
                 a {
                     color: $color-background;
                     border-radius: 0;
                     border-bottom: $border transparent;
-                    padding: .5rem;
-                    width: 15rem;
-                    text-align: center;
-                    font-weight: $font-medium;
-                    transition: $transition;
                 }
 
                 a:hover {
-                    background: $color-secondary;
                     border-bottom: $border $color-background;
                 }
+            }
+        }
+
+        .footer-menu {
+            @extend %flex-center;
+
+            @include gradient-effect(a);
+            a {
+                @extend %flex-between;
+                flex-direction: row;
+                width: 20vw;
+                margin: 0.5rem;
+                border-bottom: $border transparent;
+                border-radius: 0;
+            }
+
+            a:hover {
+                border-bottom: $border $color-background;
             }
         }
     }
@@ -165,8 +163,21 @@ footer {
 
 .copyright {
     @extend %flex-center;
-    background: $gradient-primary;
+    background: $gradient-primary-to-secondary;
+    flex-direction: row;
+    border-top: $border $color-background;        
     color: $color-background;
-    border-top: $border $color-background;
-    padding: 0.5rem;
+
+    p,
+    a {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        color: $color-background;
+        border-bottom: $border transparent;
+    }
+
+    a:hover {
+        border-radius: 0;
+        border-bottom: $border $color-background;
+    }
 }
