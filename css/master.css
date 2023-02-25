@@ -33,7 +33,7 @@ footer .footer .contact {
 /*---------- GRADIENT ----------*/
 footer .footer .footer-menu a::before, footer .footer .footer-menu a, footer::before, footer, nav::before, nav {
   transition: 0.5s;
-  background: linear-gradient(to right, #001e50 0%, #00437a 50%, #001e50 100%);
+  background: linear-gradient(to right, #76b729 0%, #36831d 50%, #76b729 100%);
   background-size: 200% auto;
 }
 
@@ -129,7 +129,7 @@ nav .nav .nav-menu {
 nav .nav .nav-menu a:hover,
 nav .nav .nav-menu .active,
 nav .nav .nav-menu .highlight {
-  background: linear-gradient(to right, #001e50 0%, #00437a 100%);
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
   color: #ffffff;
 }
 nav .nav .nav-menu .highlight {
@@ -165,7 +165,7 @@ footer:hover::before {
 }
 
 footer {
-  background: linear-gradient(to right, #001e50 0%, #00437a 100%);
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
 }
 footer .footer {
   display: grid;
@@ -214,7 +214,7 @@ footer .footer .footer-menu a:hover {
 }
 
 .copyright {
-  background: linear-gradient(to right, #001e50 0%, #00437a 100%);
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
   flex-direction: row;
   border-top: 1px solid #ffffff;
   color: #ffffff;
