@@ -122,28 +122,6 @@ footer {
                 font-weight: $font-weight-medium;
                 text-align: left;
             }
-
-            p {
-                margin: 1rem 0;
-                width: fit-content;
-                @extend %flex-left;
-                color: $color-background;
-
-                a {
-                    padding: 0;
-                    color: $color-background;
-                    border-radius: 0;
-                    border-bottom: $border transparent;
-
-                    i {
-                        height: 1rem;
-                    }
-                }
-
-                a:hover {
-                    border-bottom: $border $color-background;
-                }
-            }
         }
 
         .footer-menu {
