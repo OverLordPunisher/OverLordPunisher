@@ -24,7 +24,7 @@
 </head>
 <body>
     <nav>
-        <div class="nav container">
+        <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">
                     <img src="src/svg/logo.svg" alt="logo">
@@ -47,39 +47,104 @@
                     <i class="uil uil-comment-alt-medical"></i>
                     Kontakt
                 </a>
-                <a href="#" class="highlight">Jetzt 2 gratis Probestunden sichern!
+                <a href="#gratis-probestunden" class="highlight">Jetzt 2 gratis Probestunden sichern!
                 </a>
             </div>
         </div>
     </nav>
     <main>
-        <header class="container">
-            <div class="text-left">
+        <header>
+            <div class="header-left">
                 <h1>mentorings</h1>
-                <h2>Stressfrei zum Erfolg</h2>
+                <h3>Stressfrei zum Erfolg</h3>
                 <p>Wir nehmen Ihrem Kind mit Hilfe ingenieurwissenschaftlicher Ansätze den Erfolgs- und Leistungsdruck. Der Weg zu besten Noten ist mit den richtigen Lerntechniken auch ohne großen Aufwand möglich. Strukturiertes und systematisches Lernen steht bei uns im Vordergrund. Gern würden wir Sie von unseren Leistungen bei einem persönlichen Gespräch überzeugen.</p>
+                <a href="#">Jetzt anmelden!</a>
             </div>
-            <div class="image-right"></div>
+            <div class="header-right">
+                <img src="src/svg/header-right.svg" alt="image">
+            </div>
         </header>
+        <h1>Warum mentorings?</h1>
+        <div class="why-grid">
+            <div class="why">
+                <img src="src/jpg/tafel.jpg" alt="tafel">
+                <p>Unterricht in Kleingruppen</p>
+            </div>
+            <div class="why">
+                <img src="src/jpg/preis.jpg" alt="preis">
+                <p>konkurrenzloses Preis-Leistungsverhältnis</p>
+            </div>
+            <div class="why">
+                <img src="src/jpg/ingenieure.jpg" alt="ingenieure">
+                <p>Lehrkräfte: Unterricht ausschließlich von Ingenieuren</p>
+            </div>
+            <div class="why">
+                <img src="src/jpg/schulfächer.jpg" alt="schulfächer">
+                <p>mehrere Schulfächer je Termin</p>
+            </div>
+            <div class="why">
+                <img src="src/jpg/laptop.jpg" alt="laptop">
+                <p>Ihre gewohnte Umgebung</p>
+            </div>
+            <div class="why">
+                <img src="src/jpg/schultasche.jpg" alt="schultasche">
+                <p>Strukturiertes und systematisches Lernen</p>
+            </div>
+        </div>
+        <h1>Preise und Zeiten</h1>
+        <div class="price-grid">
+            <div class="price">
+                <h2>Nachhilfe</h2>
+                <h1>11,99€ <span>pro Unterrichtsstunde</span></h1>
+                <p>1 x 90 Minuten Block pro Woche</p>
+                <p>1 Block pro Woche für alle Fächer* ausreichend</p>
+                <p>*außer 2. Fremdsprache (Latein, Spanisch)</p>
+            </div>
+            <div class="price">
+                <h2>Ohne Kosten</h2>
+                <h1>0€ <span>Gefördert</span></h1>
+                <p>Kostenlose Nachhilfe für Bezieher von Bürgergeld und Wohngeld</p>
+                <p>Wir beraten Sie gerne</p>
+                <p>Unterstützung bei der Anmeldung</p>
+            </div>
+        </div>
+        <h1 id="gratis-probestunden">Jetzt 2 gratis Probestunden sichern!</h1>
+        <div class="gratis-probestunden">
+            <form action="https://formsubmit.co/dib.ahmad.00@gmail.com" method="POST">
+            <select name = "dropdown">
+                <option value = "Anrede" selected>Anrede</option>
+                <option value = "Herr">Herr</option>
+                <option value = "Frau">Frau</option>
+            </select>
+
+            <div>
+                <i class="uil uil-user"></i>
+                <input type="text" id="vor-name" name="name" placeholder="Vorname" required>
+            </div>
+            <input type="text" id="nach-name" name="name" placeholder="Nachname" required>
+ 
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <input type="text" id="telefonnummer" name="name" placeholder="Telefonnummer" required>
+
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Message" required></textarea>
+
+            <button type="submit">Send</button>
+            </form>
+        </div>
     </main>
     <footer>
-        <div class="footer container">
-            
-            <div class="contact">
+        <div class="footer-container">
+            <div class="footer-contact">
                 <h3>Kontakt</h3>
-                Wir sind erreichbar via<br> WhatsApp, Telegram oder E-Mail
-                <a href="#">
-                    <i class="uil uil-whatsapp"></i>
-                    <a href="https://api.whatsapp.com/send?phone=15551234567">Send Message</a>
-                </a>
-                <a href="#">
-                    <i class="uil uil-telegram"></i>
-                </a>
-                <a href="#">
-                    <i class="uil uil-envelope"></i>
-                </a>
+                <p>Wir sind erreichbar via</p>
+                <div class="contact-links">
+                    <a href="https://api.whatsapp.com/send?phone=15551234567"><i class="uil uil-whatsapp"></i></a>
+                    <a href="https://telegram.me/dib_ad"><i class="uil uil-telegram"></i></a>
+                    <a href="mailto:info@mentorings.de"><i class="uil uil-envelope contact-button"></i></a>
+                </div>
             </div>
-            <div class="footer-img">
+            <div class="footer-logo">
                 <a href="index.html">
                     <img src="src/svg/logo-white.svg" alt="logo">
                 </a>
@@ -107,12 +172,13 @@
 
     <div class="copyright">
         <p>&copy 2023 mentorings</p>|
-        <p>Webdesign von dib-a</p>|
+        <a href="https://dib-a.github.io/dib-a/">Webdesign von dib-a</a>|
         <a href="#">Impressum</a>|
         <a href="#">AGBs</a>|
         <a href="#">Datenschutz</a>|
         <a href="#">Widerrufsrecht</a>
     </div>
+
     <!---------- IMPORT JAVASCRIPT ---------->
     <script src="js/master.js"></script>
 </body>

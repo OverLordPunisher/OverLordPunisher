@@ -1,4 +1,8 @@
-/*---------- IMPORT ----------*/ /*---------- IMPORT ----------*/ /*---------- DEFINE COLORS ----------*/
+/*---------- IMPORT ----------*/ /*---------- DEFINE COLORS ----------*/
+/*---------- DEFINE FONT AND TYPOGRAPHIE ----------*/
+/*---------- DEFINE LAYOUT ----------*/
+/*---------- DEFINE ANIMATION ----------*/
+/*---------- IMPORT ----------*/ /*---------- DEFINE COLORS ----------*/
 /*---------- DEFINE FONT AND TYPOGRAPHIE ----------*/
 /*---------- DEFINE LAYOUT ----------*/
 /*---------- DEFINE ANIMATION ----------*/
@@ -7,31 +11,24 @@
 /*---------- DEFINE LAYOUT ----------*/
 /*---------- DEFINE ANIMATION ----------*/
 /*---------- FLEX ----------*/
-header .text-left, .copyright, footer .footer .footer-menu, footer .footer .footer-img {
+.price-grid .price, .why-grid .why, header .header-right, header .header-left, .copyright, footer .footer-container .footer-menu, footer .footer-container .footer-logo, footer .footer-container .footer-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-footer .footer .footer-menu a, nav .nav .nav-menu, nav .nav {
+footer .footer-container .footer-menu a, nav .nav-container .nav-menu, nav .nav-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-footer .footer .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-}
-
 /*---------- GRID ----------*/
 /*---------- EFFECTS ----------*/
 /*---------- GRADIENT ----------*/
-footer .footer .footer-menu a::before, footer .footer .footer-menu a, footer::before, footer, nav::before, nav {
+.gratis-probestunden button::before, .gratis-probestunden button, .gratis-probestunden::before, .gratis-probestunden, .price-grid .price::before, .price-grid .price, header .header-left a::before, header .header-left a, footer .footer-container .footer-menu a::before, footer .footer-container .footer-menu a, footer::before, footer, nav::before, nav {
   transition: 0.5s;
   background: linear-gradient(to right, #76b729 0%, #36831d 50%, #76b729 100%);
   background-size: 200% auto;
@@ -46,11 +43,15 @@ footer .footer .footer-menu a::before, footer .footer .footer-menu a, footer::be
 body {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  color: #222222;
+  color: #111111;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
 }
 
 h1 {
@@ -69,7 +70,7 @@ a {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
-  color: #222222;
+  color: #111111;
 }
 
 .container {
@@ -78,6 +79,8 @@ a {
 }
 
 main {
+  width: 82vw;
+  margin: auto;
   margin-top: 10vh;
 }
 
@@ -105,43 +108,47 @@ nav:hover::before {
 }
 
 nav {
-  background: #ffffff;
+  z-index: 1;
   position: fixed;
+  width: 100vw;
   top: 0;
   left: 0;
 }
-nav .nav {
-  padding: 0 9vw;
+nav .nav-container {
   flex-direction: row;
+  background: white;
   height: 10vh;
-  background: #ffffff;
+  padding: 0 9vw;
 }
-nav .nav .nav-logo {
+nav .nav-container .nav-logo {
   height: 100%;
 }
-nav .nav .nav-logo img {
+nav .nav-container .nav-logo a img {
   height: 100%;
 }
-nav .nav .nav-menu {
+nav .nav-container .nav-menu {
   flex-direction: row;
-  width: 60%;
+  margin-right: 3rem;
 }
-nav .nav .nav-menu a:hover,
-nav .nav .nav-menu .active,
-nav .nav .nav-menu .highlight {
+nav .nav-container .nav-menu a {
+  transition: 0.5s;
+  margin: 0 1rem;
+}
+nav .nav-container .nav-menu a:hover,
+nav .nav-container .nav-menu .active,
+nav .nav-container .nav-menu .highlight {
   background: linear-gradient(to right, #76b729 0%, #36831d 100%);
   color: #ffffff;
 }
-nav .nav .nav-menu .highlight {
-  transition: 0.5s;
-}
-nav .nav .nav-menu .highlight:hover {
+nav .nav-container .nav-menu .active:hover,
+nav .nav-container .nav-menu .highlight:hover {
   transform: scale(1.1);
 }
-nav .nav.nav-fixed {
+nav .nav-fixed {
   height: 7vh;
 }
 
+/*---------- FOOTER ----------*/
 footer {
   position: relative;
   color: #ffffff;
@@ -165,29 +172,28 @@ footer:hover::before {
 }
 
 footer {
+  margin-top: 5rem;
   background: linear-gradient(to right, #76b729 0%, #36831d 100%);
 }
-footer .footer {
+footer .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 1rem;
 }
-footer .footer .footer-img img {
-  width: 75%;
-}
-footer .footer .contact {
-  text-align: left;
-}
-footer .footer .contact h3 {
+footer .footer-container .footer-contact a, footer .footer-container .footer-contact i {
+  font-size: 3rem;
   color: #ffffff;
-  font-weight: 500;
-  text-align: left;
 }
-footer .footer .footer-menu a {
+footer .footer-container .footer-logo a img {
+  height: 20vh;
+}
+footer .footer-container .footer-menu {
+  width: 100%;
+}
+footer .footer-container .footer-menu a {
   position: relative;
   color: #ffffff;
 }
-footer .footer .footer-menu a::before {
+footer .footer-container .footer-menu a::before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -198,21 +204,22 @@ footer .footer .footer-menu a::before {
   border-radius: 2rem;
   filter: blur(0.75rem);
 }
-footer .footer .footer-menu a:hover,
-footer .footer .footer-menu a:hover::before {
+footer .footer-container .footer-menu a:hover,
+footer .footer-container .footer-menu a:hover::before {
   background-position: right center;
 }
-footer .footer .footer-menu a {
+footer .footer-container .footer-menu a {
   flex-direction: row;
-  width: 20vw;
   margin: 0.5rem;
-  border-bottom: 1px solid transparent;
+  width: 50%;
   border-radius: 0;
+  border-bottom: 1px solid transparent;
 }
-footer .footer .footer-menu a:hover {
+footer .footer-container .footer-menu a:hover {
   border-bottom: 1px solid #ffffff;
 }
 
+/*---------- COPYRIGHT ----------*/
 .copyright {
   background: linear-gradient(to right, #76b729 0%, #36831d 100%);
   flex-direction: row;
@@ -231,16 +238,179 @@ footer .footer .footer-menu a:hover {
   border-bottom: 1px solid #ffffff;
 }
 
-/*---------- DEFINE COLORS ----------*/
-/*---------- DEFINE FONT AND TYPOGRAPHIE ----------*/
-/*---------- DEFINE LAYOUT ----------*/
-/*---------- DEFINE ANIMATION ----------*/
 /*---------- HEADER ----------*/
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 90vh;
+  height: 100vh;
 }
-header .text-left {
+header .header-left a {
+  position: relative;
+  color: #ffffff;
+}
+header .header-left a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+header .header-left a:hover,
+header .header-left a:hover::before {
+  background-position: right center;
+}
+header .header-left a {
+  padding: 1rem 2rem;
+  margin: 2rem;
+}
+header .header-right img {
+  width: 60%;
+}
+
+/*---------- WHY ----------*/
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 5rem 0;
+}
+.why-grid .why img {
+  width: 12vw;
+}
+
+/*---------- PRICE AND TIME ----------*/
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rem;
+  margin: 5rem 0;
+}
+.price-grid .price {
+  position: relative;
+  color: #ffffff;
+}
+.price-grid .price::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+.price-grid .price:hover,
+.price-grid .price:hover::before {
+  background-position: right center;
+}
+.price-grid .price,
+.price-grid .price {
+  padding: 5rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  color: #111111;
+}
+.price-grid .price h1,
+.price-grid .price h1 {
+  margin-bottom: 2.5rem;
+  position: relative;
+  font-size: 3rem;
+}
+.price-grid .price h1 span,
+.price-grid .price h1 span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: absolute;
+  top: 1rem;
+  text-align: left;
+}
+.price-grid .price p,
+.price-grid .price p {
   text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #111111;
+}
+
+/*---------- GRATIS-PROBESTUNDEN ----------*/
+.gratis-probestunden {
+  position: relative;
+  color: #ffffff;
+}
+
+.gratis-probestunden::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+
+.gratis-probestunden:hover,
+.gratis-probestunden:hover::before {
+  background-position: right center;
+}
+
+.gratis-probestunden {
+  width: 40vw;
+  margin: 5rem auto;
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 3rem;
+}
+.gratis-probestunden label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.gratis-probestunden select,
+.gratis-probestunden input,
+.gratis-probestunden textarea {
+  font-family: "Poppins", sans-serif;
+  color: #111111;
+  background: #fafafa;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 95%;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  resize: none;
+  margin: 0.5rem;
+}
+.gratis-probestunden textarea {
+  height: 25vh;
+}
+.gratis-probestunden button {
+  position: relative;
+  color: #ffffff;
+}
+.gratis-probestunden button::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  filter: blur(0.75rem);
+}
+.gratis-probestunden button:hover,
+.gratis-probestunden button:hover::before {
+  background-position: right center;
+}
+.gratis-probestunden button[type=submit] {
+  color: #ffffff;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
