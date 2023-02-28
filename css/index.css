@@ -260,10 +260,7 @@ footer .footer-container .footer-menu a:hover {
   border-bottom: 1px solid #ffffff;
 }
 
-@media only screen and (max-width: 767px) {
-  /* Styles for mobile devices */
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (max-width: 1023px) {
   /* Styles for tablets */
   nav {
     position: absolute;
@@ -305,6 +302,9 @@ footer .footer-container .footer-menu a:hover {
     align-items: center;
     justify-content: center;
   }
+}
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile devices */
 }
 /*---------- HEADER ----------*/
 header {
@@ -506,10 +506,7 @@ header .header-right img {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
-  /* Styles for mobile devices */
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (max-width: 1023px) {
   /* Styles for tablets */
   header {
     margin-top: 100vh;
@@ -530,4 +527,7 @@ header .header-right img {
   .gratis-probestunden {
     width: 70vw;
   }
+}
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile devices */
 }/*# sourceMappingURL=index.css.map */
