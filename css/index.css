@@ -260,7 +260,7 @@ footer .footer-container .footer-menu a:hover {
   border-bottom: 1px solid #ffffff;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Styles for tablets */
   nav {
     position: absolute;
@@ -305,6 +305,56 @@ footer .footer-container .footer-menu a:hover {
 }
 @media only screen and (max-width: 767px) {
   /* Styles for mobile devices */
+  nav {
+    position: absolute;
+  }
+  nav .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  nav .nav-container .nav-logo {
+    height: 30vh;
+  }
+  nav .nav-container .nav-logo img {
+    width: 100%;
+  }
+  nav .nav-container .nav-menu {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem;
+  }
+  nav .nav-container .nav-menu a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 2rem;
+  }
+  footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer .footer-container .footer-logo img {
+    width: 100%;
+  }
+  footer .footer-container .footer-menu a {
+    width: 94vw;
+    margin: auto;
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 /*---------- HEADER ----------*/
 header {
@@ -506,12 +556,16 @@ header .header-right img {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* Styles for tablets */
   header {
     margin-top: 100vh;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  header .header-right,
+  header .header-left {
+    height: 50vh;
   }
   .why-grid {
     display: grid;
@@ -530,4 +584,35 @@ header .header-right img {
 }
 @media only screen and (max-width: 767px) {
   /* Styles for mobile devices */
+  header {
+    margin-top: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header .header-right,
+  header .header-left {
+    height: 50vh;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .why-grid .why {
+    text-align: center;
+    height: 33vh;
+  }
+  .why-grid .why img {
+    height: 100%;
+    width: auto;
+  }
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .price-grid .price h1 span {
+    position: relative;
+  }
+  .gratis-probestunden {
+    width: 50vw;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -122,11 +122,16 @@ header {
     }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 /* Styles for tablets */
     header {
         margin-top: 100vh;
         @include grid(1);
+    
+        .header-right,
+        .header-left {
+            height: 50vh;
+        }
     }
 
     .why-grid {
@@ -148,4 +153,44 @@ header {
 
 @media only screen and (max-width: 767px) {
 /* Styles for mobile devices */
+    header {
+        margin-top: 100vh;
+        @include grid(1);
+
+        .header-right,
+        .header-left {
+            height: 50vh;
+        }
+    }
+
+    .why-grid {
+        @include grid(1);
+
+        .why {
+            text-align: center;
+            height: 33vh;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    .price-grid {
+        @include grid(1);
+
+        .price {
+            h1 {
+
+                span {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .gratis-probestunden {
+        width: 50vw;
+    }
 }
