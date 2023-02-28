@@ -348,6 +348,8 @@ footer .footer-container .footer-menu a:hover {
   footer .footer-container .footer-menu a {
     width: 94vw;
     margin: auto;
+    margin: 1rem 0;
+    padding: 0;
   }
   .copyright {
     display: flex;
