@@ -2,29 +2,18 @@
 /*---------- DEFINE FONT AND TYPOGRAPHIE ----------*/
 /*---------- DEFINE LAYOUT ----------*/
 /*---------- DEFINE ANIMATION ----------*/
+/*---------- DEFINE EFFECTS ----------*/
 /*---------- IMPORT ----------*/ /*---------- DEFINE COLORS ----------*/
 /*---------- DEFINE FONT AND TYPOGRAPHIE ----------*/
 /*---------- DEFINE LAYOUT ----------*/
 /*---------- DEFINE ANIMATION ----------*/
+/*---------- DEFINE EFFECTS ----------*/
 /*---------- IMPORT ----------*/ /*---------- DEFINE COLORS ----------*/
 /*---------- DEFINE FONT AND TYPOGRAPHIE ----------*/
 /*---------- DEFINE LAYOUT ----------*/
 /*---------- DEFINE ANIMATION ----------*/
+/*---------- DEFINE EFFECTS ----------*/
 /*---------- FLEX ----------*/
-.price-grid .price, .why-grid .why, header .header-right, header .header-left, .copyright, footer .footer-container .footer-menu, footer .footer-container .footer-logo, footer .footer-container .footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-footer .footer-container .footer-menu a, nav .nav-container .nav-menu, nav .nav-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /*---------- GRID ----------*/
 /*---------- EFFECTS ----------*/
 /*---------- GRADIENT ----------*/
@@ -43,7 +32,7 @@ footer .footer-container .footer-menu a, nav .nav-container .nav-menu, nav .nav-
 body {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  color: #111111;
+  color: #333333;
 }
 
 html {
@@ -69,8 +58,8 @@ h3 {
 a {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  color: #111111;
+  border-radius: 1rem;
+  color: #333333;
 }
 
 .container {
@@ -98,7 +87,7 @@ nav::before {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 0;
   filter: blur(0.75rem);
 }
 
@@ -115,7 +104,10 @@ nav {
   left: 0;
 }
 nav .nav-container {
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background: white;
   height: 10vh;
   padding: 0 9vw;
@@ -127,12 +119,17 @@ nav .nav-container .nav-logo a img {
   height: 100%;
 }
 nav .nav-container .nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: row;
   margin-right: 3rem;
 }
 nav .nav-container .nav-menu a {
-  transition: 0.5s;
+  transition: 0.3s;
   margin: 0 1rem;
+  font-size: 1.25rem;
 }
 nav .nav-container .nav-menu a:hover,
 nav .nav-container .nav-menu .active,
@@ -146,6 +143,9 @@ nav .nav-container .nav-menu .highlight:hover {
 }
 nav .nav-fixed {
   height: 7vh;
+}
+nav .nav-fixed a {
+  font-size: 1rem !important;
 }
 
 /*---------- FOOTER ----------*/
@@ -162,7 +162,7 @@ footer::before {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   filter: blur(0.75rem);
 }
 
@@ -179,14 +179,30 @@ footer .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+footer .footer-container .footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 footer .footer-container .footer-contact a, footer .footer-container .footer-contact i {
   font-size: 3rem;
   color: #ffffff;
+}
+footer .footer-container .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 footer .footer-container .footer-logo a img {
   height: 20vh;
 }
 footer .footer-container .footer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 footer .footer-container .footer-menu a {
@@ -201,7 +217,7 @@ footer .footer-container .footer-menu a::before {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   filter: blur(0.75rem);
 }
 footer .footer-container .footer-menu a:hover,
@@ -209,7 +225,10 @@ footer .footer-container .footer-menu a:hover::before {
   background-position: right center;
 }
 footer .footer-container .footer-menu a {
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   margin: 0.5rem;
   width: 50%;
   border-radius: 0;
@@ -221,8 +240,11 @@ footer .footer-container .footer-menu a:hover {
 
 /*---------- COPYRIGHT ----------*/
 .copyright {
-  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #76b729 0%, #36831d 100%);
   border-top: 1px solid #ffffff;
   color: #ffffff;
 }
@@ -238,11 +260,63 @@ footer .footer-container .footer-menu a:hover {
   border-bottom: 1px solid #ffffff;
 }
 
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile devices */
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+  nav {
+    position: absolute;
+  }
+  nav .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  nav .nav-container .nav-logo {
+    height: 30vh;
+  }
+  nav .nav-container .nav-menu {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem;
+  }
+  nav .nav-container .nav-menu a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 2rem;
+  }
+  footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 /*---------- HEADER ----------*/
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
+}
+header .header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 header .header-left a {
   position: relative;
@@ -256,7 +330,7 @@ header .header-left a::before {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   filter: blur(0.75rem);
 }
 header .header-left a:hover,
@@ -266,6 +340,12 @@ header .header-left a:hover::before {
 header .header-left a {
   padding: 1rem 2rem;
   margin: 2rem;
+}
+header .header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 header .header-right img {
   width: 60%;
@@ -278,6 +358,12 @@ header .header-right img {
   gap: 1rem;
   margin: 5rem 0;
 }
+.why-grid .why {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .why-grid .why img {
   width: 12vw;
 }
@@ -286,7 +372,7 @@ header .header-right img {
 .price-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20rem;
+  gap: 5rem;
   margin: 5rem 0;
 }
 .price-grid .price {
@@ -301,7 +387,7 @@ header .header-right img {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   filter: blur(0.75rem);
 }
 .price-grid .price:hover,
@@ -310,10 +396,14 @@ header .header-right img {
 }
 .price-grid .price,
 .price-grid .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 5rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   background: #ffffff;
-  color: #111111;
+  color: #333333;
 }
 .price-grid .price h1,
 .price-grid .price h1 {
@@ -333,7 +423,8 @@ header .header-right img {
 .price-grid .price p {
   text-align: center;
   padding: 1rem;
-  border-top: 1px solid #111111;
+  border-top: 1px solid #eeeeee;
+  width: 100%;
 }
 
 /*---------- GRATIS-PROBESTUNDEN ----------*/
@@ -350,7 +441,7 @@ header .header-right img {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   filter: blur(0.75rem);
 }
 
@@ -363,7 +454,7 @@ header .header-right img {
   width: 40vw;
   margin: 5rem auto;
   background: #ffffff;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 3rem;
 }
 .gratis-probestunden label {
@@ -375,7 +466,7 @@ header .header-right img {
 .gratis-probestunden input,
 .gratis-probestunden textarea {
   font-family: "Poppins", sans-serif;
-  color: #111111;
+  color: #333333;
   background: #fafafa;
   padding: 0.5rem;
   font-size: 1rem;
@@ -400,7 +491,7 @@ header .header-right img {
   right: 0;
   left: 0;
   bottom: 0;
-  border-radius: 2rem;
+  border-radius: 1rem;
   filter: blur(0.75rem);
 }
 .gratis-probestunden button:hover,
@@ -410,7 +501,33 @@ header .header-right img {
 .gratis-probestunden button[type=submit] {
   color: #ffffff;
   border: none;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 1rem 5rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for mobile devices */
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+  header {
+    margin-top: 100vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-grid .why {
+    text-align: center;
+  }
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gratis-probestunden {
+    width: 70vw;
+  }
 }/*# sourceMappingURL=index.css.map */

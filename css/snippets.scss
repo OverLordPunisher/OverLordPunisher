@@ -2,25 +2,11 @@
 @import 'variables';
 
 /*---------- FLEX ----------*/
-%flex-center {
+@mixin flex($direction, $align, $justify) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-%flex-between {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-%flex-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: left;
+    flex-direction: #{$direction};
+    align-items: #{$align};
+    justify-content: #{$justify};
 }
 
 /*---------- GRID ----------*/
@@ -37,7 +23,7 @@
     background-size: 200% auto;
 }
 
-@mixin gradient-effect($element) {
+@mixin gradient-effect($element, $border-radius, $blur-effect) {
     #{$element} {
         @extend %effect-gradient;
         position: relative;
@@ -53,8 +39,8 @@
         right: 0;
         left: 0;
         bottom: 0;
-        border-radius: $round;
-        filter: blur(0.75rem);
+        border-radius: #{$border-radius};
+        filter: blur(#{$blur-effect});
     }
 
     #{$element}:hover,

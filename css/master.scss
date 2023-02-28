@@ -53,7 +53,7 @@ main {
 }
 
 /*---------- NAV ----------*/
-@include gradient-effect(nav);
+@include gradient-effect(nav, 0, $blur-effect);
 
 nav {
     z-index: 1;
@@ -63,8 +63,7 @@ nav {
     left: 0;
 
     .nav-container {
-        @extend %flex-between;
-        flex-direction: row;
+        @include flex(row, center, space-between);
         background: white;
         height: 10vh;
         padding: 0 9vw;
@@ -78,13 +77,14 @@ nav {
         }
 
         .nav-menu {
-            @extend %flex-between;
+            @include flex(row, center, space-between);
             flex-direction: row;
             margin-right: 3rem;
 
             a {
-                transition: $transition;
+                transition: 0.3s;
                 margin: 0 1rem;
+                font-size: 1.25rem;
             }
 
             a:hover,
@@ -103,11 +103,15 @@ nav {
 
     .nav-fixed {
         height: 7vh;
+
+        a {
+            font-size: $normal-font-size !important;
+        }
     }
 }
 
 /*---------- FOOTER ----------*/
-@include gradient-effect(footer);
+@include gradient-effect(footer, $round, $blur-effect);
 footer {
     margin-top: 5rem;
     background: $gradient-primary-to-secondary;
@@ -116,7 +120,7 @@ footer {
         @include grid(3);
         
         .footer-contact {
-            @extend %flex-center;
+            @include flex(column, center, center);
 
             a, i {
                 font-size: $h1-font-size;
@@ -125,7 +129,7 @@ footer {
         }
         
         .footer-logo {
-            @extend %flex-center;
+            @include flex(column, center, center);
 
             a img {
                 height: 20vh;
@@ -133,13 +137,12 @@ footer {
         }
 
         .footer-menu {
-            @extend %flex-center;
+            @include flex(column, center, center);
             width: 100%;
 
-            @include gradient-effect(a);
+            @include gradient-effect(a, $round, $blur-effect);
             a {
-                @extend %flex-between;
-                flex-direction: row;
+                @include flex(row, center, space-between);
                 margin: 0.5rem;
                 width: 50%;
                 border-radius: 0;
@@ -155,9 +158,8 @@ footer {
 
 /*---------- COPYRIGHT ----------*/
 .copyright {
-    @extend %flex-center;
+    @include flex(row, center, center);
     background: $gradient-primary-to-secondary;
-    flex-direction: row;
     border-top: $border $color-background;        
     color: $color-background;
 
@@ -172,5 +174,48 @@ footer {
     a:hover {
         border-radius: 0;
         border-bottom: $border $color-background;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+/* Styles for mobile devices */
+}
+    
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* Styles for tablets */
+    nav {
+        position: absolute;
+
+        .nav-container {
+            @include flex(column, center, space-between);
+            height: 100vh;
+
+            .nav-logo {
+                height: 30vh;
+            }
+
+            .nav-menu {
+                width: 100vw;
+                height: 50vh;
+                @include flex(column, center, space-between);
+                margin: 5rem;
+            
+                a {
+                    @include flex(row, center, space-between);
+                    width: 90%;
+                    font-size: $h2-font-size;
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer-container {
+            @include grid(1);
+        }
+    }
+
+    .copyright {
+        @include flex(column, center, center);
     }
 }

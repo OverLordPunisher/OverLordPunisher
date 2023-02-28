@@ -2,8 +2,8 @@
 $color-primary: #76b729;
 $color-secondary: #36831d;
 $color-background: #ffffff;
-$color-font: #111111;
-$color-light: #efefef;
+$color-font: #333333;
+$color-light: #eeeeee;
 
 $shadow: 0 0 1rem;
 $shadow-inset: inset 0 0 1rem;
@@ -31,10 +31,15 @@ $desktop-screen: 82vw;
 $tablet-screen: 88vw;
 $mobile-screen: 94vw;
 
-$round: 2rem;
+$round: 1rem;
 $space: 5rem;
 $small-space: 2.5rem;
 
 $border: 1px solid;
+
 /*---------- DEFINE ANIMATION ----------*/
 $transition: 0.5s;
+$transition-fast: 0.3s;
+
+/*---------- DEFINE EFFECTS ----------*/
+$blur-effect: 0.75rem;

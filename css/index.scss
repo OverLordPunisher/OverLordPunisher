@@ -8,8 +8,8 @@ header {
     height: 100vh;
 
     .header-left {
-        @extend %flex-center;
-        @include gradient-effect(a);
+        @include gradient-effect(a, $round, $blur-effect);
+        @include flex(column, center, center);
         a {
             padding: 1rem 2rem;
             margin: 2rem;
@@ -17,7 +17,7 @@ header {
     }
 
     .header-right {
-        @extend %flex-center;
+        @include flex(column, center, center);
 
         img {
             width: 60%;
@@ -32,7 +32,7 @@ header {
     margin: 5rem 0;
 
     .why {
-        @extend %flex-center;
+        @include flex(column, center, center);
 
         img {
             width: 12vw;
@@ -43,13 +43,13 @@ header {
 /*---------- PRICE AND TIME ----------*/
 .price-grid {
     @include grid(2);
-    gap: 20rem;
+    gap: 5rem;
     margin: 5rem 0;
 
-    @include gradient-effect('.price');
+    @include gradient-effect('.price', $round, $blur-effect);
     .price,
     .price {
-        @extend %flex-center;
+        @include flex(column, center, center);
         padding: 5rem;
         border-radius: $round;
         background: $color-background;
@@ -72,13 +72,14 @@ header {
         p {
             text-align: center;
             padding: 1rem;
-            border-top: $border $color-font;
+            border-top: $border $color-light;
+            width: 100%;
         }
     }
 }
 
 /*---------- GRATIS-PROBESTUNDEN ----------*/
-@include gradient-effect('.gratis-probestunden');
+@include gradient-effect('.gratis-probestunden', $round, $blur-effect);
 .gratis-probestunden {
     width: 40vw;
     margin: $space auto;
@@ -111,12 +112,40 @@ header {
         height: 25vh;
     }
 
-    @include gradient-effect(button);
+    @include gradient-effect(button, $round, $blur-effect);
     button[type="submit"] {
         color: $color-background;
         border: none;
         border-radius: $round;
         padding: 1rem 5rem;
         cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+/* Styles for mobile devices */
+}
+        
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* Styles for tablets */
+    header {
+        margin-top: 100vh;
+        @include grid(1);
+    }
+
+    .why-grid {
+        @include grid(2);
+
+        .why {
+            text-align: center;
+        }
+    }
+
+    .price-grid {
+        @include grid(1);
+    }
+
+    .gratis-probestunden {
+        width: 70vw;
     }
 }
